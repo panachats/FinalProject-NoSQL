@@ -1,0 +1,80 @@
+html,
+body,
+.intro {
+  /* height: 100%; */
+  scroll-behavior: smooth;
+}
+
+.textrow {
+    text-transform: uppercase;
+}
+
+thead th,
+tbody th {
+  color: rgb(34, 34, 34);
+}
+
+
+.card{
+  box-shadow: 0 0 10px rgba(228, 228, 228, 0.5);
+  border-radius: 15px;
+}
+
+tbody td {
+  font-weight: 500;
+  color: rgba(34, 34, 34, 0.65);
+}
+
+.Create{
+    margin-right: 105px;
+}
+
+
+body {
+    font-family: 'Kanit';
+    background-color: rgb(244, 244, 244);
+}
+
+/* th{
+    font-size: 1.2em;
+    text-transform: uppercase;
+} */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+  }
+
+.navbar {
+    background-color: rgb(30, 30, 30);
+    color: white;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.5em 0;
+    box-shadow: 0 0 10px rgba(176, 176, 176, 0.5);
+    z-index: 100;
+}
+
+.navbar-brand{
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ban{
+  width: 1256px;
+height: 452px;
+left: 82px;
+top: 106px;
+
+background: url(https://shrm-res.cloudinary.com/image/upload/c_crop,h_900,w_1599,x_0,y_0/w_auto:100,w_1140,h_642,q_auto,f_auto/v1/Legal%20and%20Compliance/192133_Layoffs_Decide_aeq3rf);
+border-radius: 34px;
+}
+.logo{
+  width: 50px;
+  height: 50px;
+}
+

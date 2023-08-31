@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-wrapper">
+        <form id="form" class="form" onsubmit="return auth(this)">
+            <img src="https://scontent.fbkk20-1.fna.fbcdn.net/v/t39.30808-6/314717013_3328735110691372_2339100602747952053_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeGLhbvwYz7zT3Qah92ff3Tjn_1A00hsb7-f_UDTSGxvv4p4Gc2Bj-x2vafhJe51-KD1Q0dX8ZXkdadCKfjvfJfX&_nc_ohc=lMqqXSToFs0AX-iNXi3&_nc_ht=scontent.fbkk20-1.fna&oh=00_AfDmA9Mt6o6j_k6uP6V6kT0ezUxeNzgX3l8FnhG28fgOOw&oe=63B2405F" alt="">
+            <h2>Login</h2>
+            <div class="input-group">
+                <input type="text" name="loginUser" id="loginUser" required>
+                <label for="loginUser">User Name</label>
+            </div>
+            <div class="input-group">
+                <input type="password" name="loginPassword" id="loginPassword" required />
+                <label for="loginPassword">Password</label>
+            </div>
+            <button type="submit"  value="Login" class="submit-btn" onclick="auth()">Submit</button>
+        </form>
+    </div>
+
+
+
+
+<script>
+function auth(event) {
+      var username = event.loginUser.value;
+      var password = event.loginPassword.value;
+
+      if (username === "admin" && password === "user") {
+        window.location.replace("home.html");
+      } else {
+        alert("Please enter valid information");
+        return false;
+      }
+      return false;
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</body>
+
+</html>

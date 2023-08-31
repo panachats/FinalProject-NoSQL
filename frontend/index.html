@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>Tech layoffs information</title>
+  <link href="index.css" rel="stylesheet">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+
+<body onload="loadTable()">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/frontend/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/frontend/das.html">DASHBORAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/frontend/index.html">INFORMATION</a>
+          </li>
+        </ul>
+        <form class="d-flex input-group w-auto">
+          <input id="searchTextBox" type="search" class="form-control" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark"
+            onclick="loadQueryTable();return false;">Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+
+
+  <div class="ban container mt-3"></div>
+  <div class="container mt-5 d-flex d-flex justify-content-between">
+    <div class="d-flex col-11">
+      <img src="https://cdn-icons-png.flaticon.com/512/2694/2694997.png" alt="" class="logo">
+      <h2 class="mt-1 ms-3" style="text-transform: uppercase;">Tech layoffs dataset from COVID 19</h2>
+    </div>
+
+    <div class="col py-2">
+      <button type="button" class="btn btn-primary Create " onclick="CreateBox()"><i class="fas fa-edit"></i><span class="px-2">Create</span></button>
+    </div>
+  </div>
+
+
+
+  <button type="button" class="btn btn-danger btn-lg" id="btn-back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <section class="intro mt-4">
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <div class="card bg-white shadow-2">
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-white table-borderless mb-0 table-hover">
+                  <thead>
+                    <tr class="textrow">
+                      <th scope="col">#</th>
+                      <th scope="col">company</th>
+                      <!-- <th scope="col">location</th> -->
+                      <th scope="col">industry</th>
+                      <th scope="col">total</th>
+                      <th scope="col">laid_off (%)</th>
+                      <th scope="col">date</th>
+                      <th scope="col">country</th>
+                      <!-- <th scope="col">funds_raised</th> -->
+                    </tr>
+                  </thead>
+                  <tbody id="mytable">
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  
+
+
+
+  <nav aria-label="Page navigation">
+    <ul class="pagination pagination-sm justify-content-center py-5" id="pagination">
+      <li class="page-item active" aria-current="page">
+        <span class="page-link">
+          1
+          <span class="visually-hidden">(current)</span>
+        </span>
+      </li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+    </ul>
+  </nav>
+
+
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+
+
+</body>
+
+</html>

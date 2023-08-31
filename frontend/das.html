@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <title>Tech layoffs graph</title>
+  <link href="index.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body >
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/frontend/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/frontend/das.html">DASHBORAD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/frontend/index.html">INFORMATION</a>
+          </li>
+        </ul>
+        <form class="d-flex input-group w-auto">
+          <input id="searchTextBox" type="search" class="form-control" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-primary" type="button" data-mdb-ripple-color="dark"
+            onclick="loadQueryTable();return false;">
+            Search
+          </button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-5 d-flex d-flex justify-content-center">
+    <div class="d-flex">
+      <img src="https://cdn-icons-png.flaticon.com/512/2257/2257295.png" alt="" class="logo">
+      <h2 class="mt-1 ms-3" style="text-transform: uppercase;">Tech layoffs Graph</h2>
+    </div>
+  </div>
+
+  <div class="container d-grid gap-2 d-flex justify-content-center mt-5">
+    <select class="form-select w-25" aria-label="Default select example" id="selectCountry" onblur="callBack()" ></select>
+    <button class="btn btn-secondary" id="btn" onclick="myFunction()">Hidden Graph</button>
+  </div>
+  
+  <div class="container">
+    <div class="container-fl  uid" id="a">
+      <div class="d-flex bd-highlight">
+
+        <div class="col-6 m-3">
+          <div id="unChart1"></div>
+        </div>
+
+        <div class="col-6 m-3">
+          <div id="unChart2"></div>
+        </div>
+
+      </div>
+
+      <div class="d-flex bd-highlight">
+
+        <div class="col-6 m-3">
+          <div id="unChart3"></div>
+        </div>
+
+        <div class="col-6 m-3">
+          <div id="unChart4"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+    <div class="container">
+      <div class="container-fluid" id="b">
+        <div class="d-flex bd-highlight">
+          <div class="col-6 m-3">
+            <div id="piechartTimelyResponse"></div>
+          </div>
+
+          <div class="col-6 m-3">
+            <div id="barchartSubmitted"></div>
+          </div>
+        </div>
+
+        <div class="d-flex bd-highlight">
+          <div class="col-6 m-3">
+            <div id="columnchart_year"></div>
+          </div>
+
+          <div class="col-6 m-3">
+            <div id="columnchart_total"></div>
+          </div>
+        </div>
+
+        <div class="d-flex bd-highlight">
+          <div class="col ms-5 mt-3">
+            <div id="columnchart_percen"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="das.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</body>
+
+</html>
